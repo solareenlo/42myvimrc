@@ -11,6 +11,7 @@ defaults write -g KeyRepeat -int 2
 mkdir -p /goinfre/$LOGNAME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /goinfre/$LOGNAME/homebrew
 echo 'PATH="/goinfre/$LOGNAME/homebrew/bin:$PATH"' >> $HOME/.zshrc
 
+# vim, git, ccls をインストールする
 brew install vim git ccls
 bash ~/.cache/dein/repos/github.com/lifepillar/vim-solarized8/scripts/solarized8.sh
 
@@ -43,11 +44,13 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh ~/.cache/dein
 
 # dein を使って vim のプラグインをインストールする
-vim
+vim ~/.vimrc
 :call dein#install()
+:call dein#update()
 ```
 
 - C++ を書くときは，当該ディレクトリで以下を実行する．
 ```shell
+# ccls へ標準ライブラリのパスを指定してあげる
 curl -O https://raw.githubusercontent.com/solareenlo/42myvimrc/main/.ccls
 ```
