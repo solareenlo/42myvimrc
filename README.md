@@ -11,9 +11,13 @@ defaults write -g KeyRepeat -int 2
 mkdir -p /goinfre/$LOGNAME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /goinfre/$LOGNAME/homebrew
 echo 'PATH="/goinfre/$LOGNAME/homebrew/bin:$PATH"' >> $HOME/.zshrc
 
-# vim, git, ccls をインストールする
-brew install vim git ccls
+# vim をインストールする
+brew install vim
+# vim で solarized の色がきちんと出るようにする
 bash ~/.cache/dein/repos/github.com/lifepillar/vim-solarized8/scripts/solarized8.sh
+
+# git, ccls をインストールする
+brew install git ccls
 
 # ファイル検索，ファイル内の単語検索ツールをインストールする
 brew install fzf bat ripgrep
