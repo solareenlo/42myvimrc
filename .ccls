@@ -1,0 +1,3 @@
+clang
+-isystem/Library/Developer/CommandLineTools/usr/include/c++/v1
+%cpp -std=c++98
