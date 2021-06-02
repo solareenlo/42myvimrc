@@ -71,6 +71,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set whichwrap=b,s,h,l,<,>,[,],~
+set clipboard+=unnamed,autoselect
 
 
 "-------------------------------------------------------------------------------
@@ -150,13 +151,13 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 " Show zenkaku spaces
 "-------------------------------------------------------------------------------
 function! ZenkakuSpace()
-    highlight ZenkakuSpace cterm=reverse ctermfg=DarkRed gui=reverse guifg=DarkRed
-endf
+        highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+    endfunction
 if has('syntax')
     augroup ZenkakuSpace
-    ¦   autocmd!
-    ¦   autocmd ColorScheme       * call ZenkakuSpace()
-    ¦   autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+        autocmd!
+        autocmd ColorScheme       * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
     augroup END
     call ZenkakuSpace()
 endif
@@ -260,8 +261,7 @@ autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 " Note: this option only works for the kind renderer, not the tree renderer.
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 
-" Ensure you have installed some decent font to show these pretty symbols, then you can en
-able icon for the kind.
+" Ensure you have installed some decent font to show these pretty symbols, then you can en able icon for the kind.
 let g:vista#renderer#enable_icon = 1
 
 " The default icons can't be suitable for all the filetypes, you can extend it as you wish
@@ -277,8 +277,7 @@ let g:vista#renderer#icons = {
 "----------------------------------------------------------
 let g:UltiSnipsUsePythonVersion    = 3
 let g:UltiSnipsEditSplit           = 'normal'
-let g:UltiSnipsSnippetDirectories  = ['~/.cache/dein/repos/github.com/honza/vim-snippets/U
-ltiSnips']
+let g:UltiSnipsSnippetDirectories  = ['~/.cache/dein/repos/github.com/honza/vim-snippets/UltiSnips']
 let g:UltiSnipsEnableSnipMate      = 0
 let g:UltiSnipsExpandTrigger       = '<c-k>'
 let g:UltiSnipsJumpForwardTrigger  = '<c-f>'
