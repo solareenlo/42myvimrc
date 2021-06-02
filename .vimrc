@@ -96,19 +96,17 @@ let mapleader = ','
 "-------------------------------------------------------------------------------
 " fzf
 "-------------------------------------------------------------------------------
-set rtp+=/Users/solareenlo/.brew/opt/fzf
+set rtp+=/goinfre/$USER/.brew/opt/fzf
 nnoremap <Leader>f :FZF<CR>
 nnoremap <silent> <Leader>r :<C-u>silent call <SID>find_rip_grep()<CR>
 
 function! s:find_rip_grep() abort
     call fzf#vim#grep(
-    ¦   \   'rg --ignore-file ~/.ignore --column --line-number --no-heading --hidden --sma
-rt-case .+',
-    ¦   \   1,
-    ¦   \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%', '?')
-,
-    ¦   \   0,
-    ¦   \ )
+        \   'rg --ignore-file ~/.ignore --column --line-number --no-heading --hidden --smart-case .+',
+        \   1,
+        \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%', '?'),
+        \   0,
+        \ )
 endfunction
 
 
