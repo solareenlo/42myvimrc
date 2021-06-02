@@ -7,6 +7,11 @@
 defaults write -g InitialKeyRepeat -int 15
 defaults write -g KeyRepeat -int 2
 
+# ターミナル用に solarized をインストールする
+cd && mkdir github && cd github
+git clone https://github.com/tomislav/osx-terminal.app-colors-solarized solarized.git
+# そして，ターミナルの設定から solarized を選択する
+
 # goinfre へ brew をインストールする
 mkdir -p /goinfre/$LOGNAME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /goinfre/$LOGNAME/homebrew
 echo 'PATH="/goinfre/$LOGNAME/homebrew/bin:$PATH"' >> $HOME/.zshrc
