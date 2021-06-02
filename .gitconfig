@@ -1,0 +1,16 @@
+[alias]
+	st = status
+	cm = commit -m
+	a = add .
+	co = checkout
+	br = branch
+	ci = commit
+	sw = switch
+[user]
+	name = solareenlo
+	email = solareenlo@gmail.com
+[color]
+	ui = true
+[core]
+	editor = vim
+	ignorecase = false
