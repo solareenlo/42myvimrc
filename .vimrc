@@ -46,7 +46,8 @@ call dein#end()
 filetype plugin indent on
 syntax enable
 set number
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 set background=dark
 colorscheme solarized8
 
