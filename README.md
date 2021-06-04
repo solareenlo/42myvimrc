@@ -16,6 +16,13 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized solarize
 mkdir -p /goinfre/$LOGNAME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /goinfre/$LOGNAME/homebrew
 echo 'PATH="/goinfre/$LOGNAME/homebrew/bin:$PATH"' >> $HOME/.zshrc
 
+# 日本とのプログラミング用フォント Cica fonts をインストールする
+cd /tmp
+curl -L https://github.com/miiton/Cica/releases/download/v5.0.2/Cica_v5.0.2_with_emoji.zip
+unzip Cica_v5.0.2_with_emoji.zip
+mv *.ttf /Users/$USER/Library/Fonts/
+# そして，ターミナルの設定から Cica fonts を選択する
+
 # vim をインストールする
 brew install vim
 # vim で solarized の色がきちんと出るようにする
