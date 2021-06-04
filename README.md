@@ -31,6 +31,10 @@ bash ~/.cache/dein/repos/github.com/lifepillar/vim-solarized8/scripts/solarized8
 # git, ccls tmux をインストールする
 brew install git ccls tmux
 
+# 予めある tmux の設定ファイルをインストールする
+cd
+curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/main/tmux/.tmux.conf
+
 # ファイル検索，ファイル内の単語検索ツールをインストールする
 brew install fzf bat ripgrep
 $(brew --prefix)/opt/fzf/install
