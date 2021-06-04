@@ -67,6 +67,9 @@ sh ./installer.sh ~/.cache/dein
 vim ~/.vimrc
 :call dein#install()
 :call dein#update()
+
+# zinit をインストールする
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 ```
 
 - C++ を書くときは，当該ディレクトリで以下を実行する．

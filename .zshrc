@@ -5,3 +5,10 @@ PATH=/Users/$LOGNAME/Library/Python/3.9/bin:$PATH
 
 alias fzf='fzf --preview "bat  --color=always --style=header,grid --line-range :100 {}"'
 source /goinfre/$LOGNAME/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+### End of Zinit's installer chunk
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light supercrabtree/k
+zinit light romkatv/powerlevel10k
