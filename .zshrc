@@ -14,3 +14,10 @@ zinit light supercrabtree/k
 zinit light romkatv/powerlevel10k
 zinit ice depth=1
 zinit light jeffreytse/zsh-vi-mode
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+
+# 重複パスを登録しない
+typeset -U path PATH
