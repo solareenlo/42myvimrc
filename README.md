@@ -18,10 +18,17 @@ echo 'PATH="/goinfre/$LOGNAME/homebrew/bin:$PATH"' >> $HOME/.zshrc
 
 # 日本とのプログラミング用フォント Cica fonts をインストールする
 cd /tmp
-curl -L https://github.com/miiton/Cica/releases/download/v5.0.2/Cica_v5.0.2_with_emoji.zip
+curl -L -O https://github.com/miiton/Cica/releases/download/v5.0.2/Cica_v5.0.2_with_emoji.zip
 unzip Cica_v5.0.2_with_emoji.zip
+## Mac
 mv *.ttf /Users/$USER/Library/Fonts/
-# そして，ターミナルの設定から Cica fonts を選択する
+## そして，ターミナルの設定から Cica fonts を選択する
+## Ubuntu
+sudo mkdir  /usr/share/fonts/truetype/cica
+sudo mv *.ttf /usr/share/fonts/truetype/cica/
+sudo fc-cache -vf
+gsettings get org.gnome.Terminal.ProfilesList list
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ font "Cica 12"
 
 # vim をインストールする
 brew install vim
