@@ -28,8 +28,8 @@ brew install vim
 # vim で solarized の色がきちんと出るようにする
 bash ~/.cache/dein/repos/github.com/lifepillar/vim-solarized8/scripts/solarized8.sh
 
-# git, ccls tmux をインストールする
-brew install git ccls tmux
+# git, tig, ccls, tmux をインストールする
+brew install git tig ccls tmux tig
 
 # 予めある tmux の設定ファイルをインストールする
 cd
