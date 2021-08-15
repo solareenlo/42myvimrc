@@ -6,6 +6,9 @@
 	br = branch
 	ci = commit
 	sw = switch
+	re = restore
+[init]
+	defaultBranch = main
 [user]
 	name = solareenlo
 	email = solareenlo@gmail.com
