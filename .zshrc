@@ -19,5 +19,8 @@ zinit light jeffreytse/zsh-vi-mode
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
+#### Python3
+export PATH=$HOME/Library/Python/3.9/bin:$PATH
+
 # 重複パスを登録しない
 typeset -U path PATH
