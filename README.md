@@ -60,8 +60,9 @@ exec $SHELL -l
 # C++ 用のリントをインストールする
 pip install cpplint
 
-# vim 上で単語保管するプラグインに必要
+# deoplete (vim 上で単語保管するプラグイン)に必要
 pip3 install --user pynvim
+echo "let g:python3_host_prog=\"$(which python3)\"" >> .vimrc
 
 # 予めある .vimrc をダウンロードする
 curl https://raw.githubusercontent.com/solareenlo/42myvimrc/main/.vimrc -o ~/.vimrc
