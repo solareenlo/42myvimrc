@@ -13,8 +13,8 @@ git clone https://github.com/tomislav/osx-terminal.app-colors-solarized solarize
 # そして，ターミナルの設定から solarized を選択する
 
 # goinfre へ brew をインストールする
-mkdir -p /goinfre/$LOGNAME/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /goinfre/$LOGNAME/homebrew
-echo 'PATH="/goinfre/$LOGNAME/homebrew/bin:$PATH"' >> $HOME/.zshrc
+mkdir -p /goinfre/$USER/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C /goinfre/$USER/homebrew
+echo 'PATH="/goinfre/$USER/homebrew/bin:$PATH"' >> $HOME/.zshrc
 
 # 日本とのプログラミング用フォント Cica fonts をインストールする
 cd /tmp
@@ -49,11 +49,11 @@ echo "alias fzf='fzf --preview \"bat  --color=always --style=header,grid --line-
 
 # zsh でハイライトと単語補完するツールをインストールする
 brew install zsh-syntax-highlighting zsh-autosuggestions
-echo "source /goinfre/$LOGNAME/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+echo "source /goinfre/$USER/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 
 # norminette をバージョンアップさせる
 /usr/local/bin/python3 -m pip install --upgrade pip
-echo 'PATH=/Users/$LOGNAME/Library/Python/3.9/bin:$PATH' >> $HOME/.zshrc
+echo 'PATH=/Users/$USER/Library/Python/3.9/bin:$PATH' >> $HOME/.zshrc
 python3 -m pip install --upgrade norminette
 exec $SHELL -l
 
