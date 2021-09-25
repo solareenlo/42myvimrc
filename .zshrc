@@ -1,5 +1,6 @@
 PATH="/goinfre/$LOGNAME/homebrew/bin:$PATH"
 PATH=/Users/$LOGNAME/Library/Python/3.9/bin:$PATH
+alias tmux='tmux -u'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
