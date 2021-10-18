@@ -77,11 +77,11 @@ vim ~/.vimrc
 :call dein#update()
 
 # zinit をインストールする
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
-    ```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+```
 
-    - C++ を書くときは，当該ディレクトリで以下を実行する．
-    ```shell
+- C++ を書くときは，当該ディレクトリで以下を実行する．
+```shell
 # ccls へ標準ライブラリのパスを指定してあげる
-    curl -O https://raw.githubusercontent.com/solareenlo/42myvimrc/main/.ccls
-    ```
+curl -O https://raw.githubusercontent.com/solareenlo/42myvimrc/main/.ccls
+```
